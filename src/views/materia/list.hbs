@@ -1,0 +1,39 @@
+<div class="container p-4">
+    <div class="row">
+       <table class="table">
+        <thead>
+            <tr align="center">
+                <th scope="col" colspan="6" align="center"><strong>LISTADO DE MATERIAS</strong></th>
+                
+            </tr>
+            <tr>
+                <th scope="col" colspan="6"><a href="/materia/agregar" class="btn btn-success ">Agregar Materia</a></th>
+                
+            </tr>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOMBRES</th>
+                <th scope="col">CREDITOS</th>
+                <th scope="col">PRE REQUISITO</th>
+                <th scope="col">ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each materias}}  
+            <tr>
+                <td>{{id_materia}}</td>
+                <td>{{nombre}}</td>
+                <td>{{creditos}}</td>
+                <td>{{materia_pre_id}}</td>
+                <td><a href="/materia/editar/{{id_materia}}" class="btn btn-secondary">Editar</a>&nbsp;&nbsp;<a href="/materia/borrar/{{id_materia}}" class="btn btn-danger">Borrar</a></td>
+            </tr>
+            {{else}}
+                 <tr align="center">
+                    <th scope="col" colspan="6" align="center"><strong>NO HAY MATERIAS AUN REGISTRADOS</strong></th>
+                 </tr>
+            {{/each}}
+        </tbody>
+     </table>
+   
+    </div>
+</div>

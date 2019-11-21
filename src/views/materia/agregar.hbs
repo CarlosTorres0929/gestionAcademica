@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+           <div class="card">
+               <div class="card-body">
+                   <form action="/materia/agregar" method="POST">
+                   <div class="form-group">
+                       <label><strong>AGREGAR MATERIA</strong></label> 
+                   </div>
+                   <div class="form-group">
+                       <input type="text" class="form-control" name="nombre" placeholder="Nombre" autofocus> 
+                   </div>
+                   <div class="form-group">
+                       <input type="number" class="form-control" name="creditos" placeholder="Creditos"> 
+                   </div>
+                   <div class="form-group">
+                   <select class="form-control"  name='materia_pre_id'>
+                            <option value="0" selected>Seleccione Materia Prerequisito</option>
+                         {{#each materias}}  
+                            <option value="{{id_materia}}">{{nombre}}</option>
+                         {{/each}}
+                    </select>
+                   </div>
+                   <div class="form-group">
+                       <button class="btn btn-success btn-block">Guardar</button>
+                   </div>
+                   </form>
+               </div>
+           </div> 
+        </div>
+    </div>
+</div>

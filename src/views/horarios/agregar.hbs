@@ -1,0 +1,55 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+           <div class="card">
+               <div class="card-body">
+                   <form action="/horarios/agregar" method="POST">
+                   <div class="form-group">
+                       <label><strong>AGREGAR HORARIO</strong></label> 
+                   </div>
+                   <div class="form-group">
+                   <select class="form-control"  name='profesor_id'>
+                            <option value="0" selected>Seleccione profesor</option>
+                         {{#each profesores}}  
+                            <option value="{{profesor_id}}">{{nombre}}</option>
+                         {{/each}}
+                    </select>
+                   </div>
+                   <div class="form-group">
+                   <select class="form-control"  name='materia_id'>
+                            <option value="0" selected>Seleccione Materia</option>
+                         {{#each materias}}  
+                            <option value="{{id_materia}}">{{nombre}}</option>
+                         {{/each}}
+                    </select>
+                   </div>
+                   <div class="form-group">
+                   <select class="form-control"  name='grupo_id'>
+                            <option value="0" selected>Seleccione el grupo</option>
+                         {{#each grupos}}  
+                            <option value="{{grupo_id}}">{{nombre}}</option>
+                         {{/each}}
+                    </select>
+                   </div>
+                   <div class="form-group">
+                       <input type="text" class="form-control" name="dia" placeholder="Dia"> 
+                   </div>
+                  <div class="form-group">
+                       <input type="text" class="form-control" name="hora_inicio" placeholder="Hora Inicio"> 
+                   </div>
+                   <div class="form-group">
+                       <input type="text" class="form-control" name="hora_fin" placeholder="Hora Fin"> 
+                   </div>
+                   <div class="form-group">
+                       <input type="text" class="form-control" name="aula" placeholder="Aula"> 
+                   </div>
+                   <div class="form-group">
+                       <button class="btn btn-success btn-block">Guardar</button>
+                   </div>
+                   
+                   </form>
+               </div>
+           </div> 
+        </div>
+    </div>
+</div>

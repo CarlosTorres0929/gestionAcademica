@@ -1,0 +1,41 @@
+<div class="container p-4">
+    <div class="row">
+       <table class="table">
+        <thead>
+            <tr align="center">
+                <th scope="col" colspan="6" align="center"><strong>LISTADO DE ESTUDIANTES</strong></th>
+                
+            </tr>
+            <tr>
+                <th scope="col" colspan="6">&nbsp;</th>
+                
+            </tr>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOMBRES</th>
+                <th scope="col">APELLIDOS</th>
+                <th scope="col">CEDULA</th>
+                <th scope="col">CORREO</th>
+                <th scope="col">ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each estudiantes}}  
+            <tr>
+                <td>{{estudiante_id}}</td>
+                <td>{{nombres}}</td>
+                <td>{{apellidos}}</td>
+                <td>{{cedula}}</td>
+                <td>{{correo}}</td>
+                <td><a href="/horarios/agregar_nota/{{horario_id}}/{{estudiante_id}}" class="btn btn-secondary">Agregar Nota</a>&nbsp;&nbsp;<a href="../../notas/{{estudiante_id}}/{{horario_id}}" class="btn btn-secondary">Ver notas</a></td>
+            </tr>
+            {{else}}
+                 <tr align="center">
+                    <th scope="col" colspan="6" align="center"><strong>NO HAY HORARIOS AUN REGISTRADOS</strong></th>
+                 </tr>
+            {{/each}}
+        </tbody>
+     </table>
+   
+    </div>
+</div>

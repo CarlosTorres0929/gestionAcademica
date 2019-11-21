@@ -1,0 +1,30 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+           <div class="card">
+               <div class="card-body">
+                   <form action="/estudiante/editar/{{estudiante.estudiante_id}}" method="POST">
+                   <div class="form-group">
+                       <label><strong>MODIFICAR ESTUDIANTE</strong></label> 
+                   </div>
+                   <div class="form-group">
+                       <input type="text" value="{{estudiante.nombres}}" class="form-control" name="nombres" placeholder="Nombres" autofocus> 
+                   </div>
+                   <div class="form-group">
+                       <input type="text" value="{{estudiante.apellidos}}" class="form-control" name="apellidos" placeholder="Apellidos"> 
+                   </div>
+                   <div class="form-group">
+                       <input type="number" value="{{estudiante.cedula}}" class="form-control" name="cedula" placeholder="Cedula"> 
+                   </div>
+                   <div class="form-group">
+                       <input type="email" value="{{estudiante.correo}}" class="form-control" name="correo" placeholder="Correo"> 
+                   </div>
+                   <div class="form-group">
+                       <button class="btn btn-success btn-block">Guardar</button>
+                   </div>
+                   </form>
+               </div>
+           </div> 
+        </div>
+    </div>
+</div>

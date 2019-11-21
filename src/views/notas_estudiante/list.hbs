@@ -1,0 +1,40 @@
+<div class="container p-4">
+    <div class="row">
+       <table class="table">
+        <thead>
+            <tr align="center">
+                <th scope="col" colspan="5" align="center"><strong>LISTADO DE NOTAS</strong></th>
+                
+            </tr>
+            <tr>
+                <th scope="col" colspan="5">&nbsp;</th>
+                
+            </tr>
+            <tr>
+                <th scope="col">PROFESOR</th>
+                <th scope="col">MATERIA</th>
+                <th scope="col">MOMENTO</th>
+                <th scope="col">NOTA</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {{#each notas}}  
+            <tr>
+                <td>{{profesor}}</td>
+                <td>{{materia}}</td>
+                <td>{{momento}}</td>
+                <td>{{nota}}</td>
+                                
+            </tr>
+            {{else}}
+                 <tr align="center">
+                    <th scope="col" colspan="6" align="center"><strong>NO HAY NOTAS AUN REGISTRADAS</strong></th>
+                 </tr>
+            {{/each}}
+     
+        </tbody>
+     </table>
+   
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container p-4">
+    <div class="row">
+       <table class="table">
+        <thead>
+            <tr align="center">
+                <th scope="col" colspan="6" align="center"><strong>LISTADO DE PROFESORES</strong></th>
+                
+            </tr>
+            <tr>
+                <th scope="col" colspan="6"><a href="/profesor/agregar" class="btn btn-success ">Agregar Profesor</a></th>
+                
+            </tr>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOMBRES Y APELLIDOS</th>
+                <th scope="col">CEDULA</th>
+                <th scope="col">CORREO</th>
+                <th scope="col">ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each profesores}}  
+            <tr>
+                <td>{{profesor_id}}</td>
+                <td>{{nombre}}</td>
+                <td>{{cedula}}</td>
+                <td>{{correo}}</td>
+                <td><a href="/profesor/editar/{{profesor_id}}" class="btn btn-secondary">Editar</a>&nbsp;&nbsp;<a href="/profesor/borrar/{{profesor_id}}" class="btn btn-danger">Borrar</a></td>
+            </tr>
+            {{else}}
+                 <tr align="center">
+                    <th scope="col" colspan="6" align="center"><strong>NO HAY PROFESORES AUN REGISTRADOS</strong></th>
+                 </tr>
+            {{/each}}
+        </tbody>
+     </table>
+   
+    </div>
+</div>

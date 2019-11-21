@@ -1,0 +1,45 @@
+<div class="container p-4">
+    <div class="row">
+       <table class="table">
+        <thead>
+            <tr align="center">
+                <th scope="col" colspan="8" align="center"><strong>LISTADO DE HORARIOS DISPONIBLES</strong></th>
+                
+            </tr>
+            <tr>
+                <th scope="col" colspan="8">&nbsp</th>
+                
+            </tr>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">PROFESOR</th>
+                <th scope="col">MATERIA</th>
+                <th scope="col">GRUPO</th>
+                <th scope="col">DIA</th>
+                <th scope="col">HORA INICIO</th>
+                <th scope="col">HORA FIN</th>
+                <th scope="col">ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each horarios}}  
+            <tr>
+                <td>{{horarios_id}}</td>
+                <td>{{profesor_id}}</td>
+                <td>{{materia_id}}</td>
+                <td>{{grupo_id}}</td>
+                <td>{{dia}}</td>
+                <td>{{hora_inicio}}</td>
+                <td>{{hora_fin}}</td>
+                <td><a href="/registrar/agregar/{{horarios_id}}" class="btn btn-secondary">Agregar Materia</a></td>
+            </tr>
+            {{else}}
+                 <tr align="center">
+                    <th scope="col" colspan="6" align="center"><strong>NO HAY HORARIOS AUN REGISTRADOS</strong></th>
+                 </tr>
+            {{/each}}
+        </tbody>
+     </table>
+   
+    </div>
+</div>

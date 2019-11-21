@@ -1,0 +1,35 @@
+<div class="container p-4">
+    <div class="row">
+       <table class="table">
+        <thead>
+            <tr align="center">
+                <th scope="col" colspan="6" align="center"><strong>LISTADO DE GRUPOS</strong></th>
+                
+            </tr>
+            <tr>
+                <th scope="col" colspan="6"><a href="/grupo/agregar" class="btn btn-success ">Agregar Grupo</a></th>
+                
+            </tr>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each grupos}}  
+            <tr>
+                <td>{{grupo_id}}</td>
+                <td>{{nombre}}</td>
+                 <td><a href="/grupo/editar/{{grupo_id}}" class="btn btn-secondary">Editar</a>&nbsp;&nbsp;<a href="/grupo/borrar/{{grupo_id}}" class="btn btn-danger">Borrar</a></td>
+            </tr>
+            {{else}}
+                 <tr align="center">
+                    <th scope="col" colspan="6" align="center"><strong>NO HAY GRUPOS AUN REGISTRADOS</strong></th>
+                 </tr>
+            {{/each}}
+        </tbody>
+     </table>
+   
+    </div>
+</div>
